@@ -1,0 +1,14 @@
+.catalog{
+    font-size: 30px;
+}
+@media (max-width: 480px){   
+}
+
+.quantity-picker{
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+h5{
+    font-size: 25px;
+}

@@ -2,7 +2,7 @@ import "./Navbar.css"
 
 function Navbar(){
     return(
-        <h1>Welcome to my online Store</h1>
+        <h1>Welcome to Cohort 68 On-Line Store</h1>
     );
 }
 
