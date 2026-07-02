@@ -4,3 +4,30 @@ img{
     height: 250px;
     border-radius: 8px;
 }
+
+label{
+    margin: 3px;
+}
+
+.prices{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    border-style: solid;
+    border-style: outset;
+    border-radius: 8px;
+    background-color: rgb(244, 172, 84);
+    color: blue;
+}
+h5{
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+}
+h1{
+    font-size: 65px;
+}
+
+h3{
+    color: rgb(210, 204, 204);
+    font-size: 25px;
+}
