@@ -75,7 +75,7 @@ function Admin() {
                                 </div>
 
                                 <div>
-                                    <button className="btn btn-dark" onClick={saveProduct}>Save Product</button>
+                                    <button className="btn btn-primary" onClick={saveProduct}>Save Product</button>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ function Admin() {
                                 </div>
 
                                 <div className="mt-3">
-                                    <button className="btn btn-dark" onClick={saveCoupon}>Save Coupon</button>
+                                    <button className="btn btn-primary" onClick={saveCoupon}>Save Coupon</button>
                                 </div>
                             </div>
                         </div>

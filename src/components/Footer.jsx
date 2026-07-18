@@ -2,8 +2,8 @@ import "./Footer.css"
 
 function Footer(){
     return(
-        <div className="bg-dark bg-gradient">
-            <p className="text-white"> My online store 2026.</p>
+        <div className="bg-success bg-gradient">
+            <p className="text-white"> 1420 Grizzly Paw LaneBozeman, MT 59715.</p>
         </div>
     );
 }

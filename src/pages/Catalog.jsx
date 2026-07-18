@@ -21,7 +21,7 @@ const [productsToDisplay, setProductsToDisplay] = useState([]); //To hold
     );
 
     function loadCatalog(){
-        let categoriesFilter = ["Produce","Sweets","Apparel"]
+        let categoriesFilter = ["Apparel","Fishing Gear","Camping"]
         setCategories(categoriesFilter);
     }
 
@@ -47,7 +47,7 @@ const [productsToDisplay, setProductsToDisplay] = useState([]); //To hold
 
     return(
         <div className="catalog">
-            <h1>School Fundraiser</h1>
+            <h1>Online Hunting and Fishing Gear</h1>
             <img src="store.jpg"></img>
             <div>
                 <button onClick={clearFilter}>Home</button>
