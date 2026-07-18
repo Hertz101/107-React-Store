@@ -183,12 +183,12 @@
   }
 }
 body{
-  background: #020024;
-background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(46, 46, 255, 1) 52%, rgba(0, 212, 255, 1) 100%);
+  background: #ffffff;
+
   
 }
 h1{
-  color: rgb(28, 67, 151);
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 72px;
+  font-size: 35px;
 }
