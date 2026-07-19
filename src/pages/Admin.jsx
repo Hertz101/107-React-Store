@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import "./Admin.css";
 
 function Admin() {
     //const[state, setState] = useState(intitalValue);
@@ -11,7 +12,7 @@ function Admin() {
     const [productCategory, setProductCategory] = useState("");
     const [productImage, setProductImage] = useState("");
     const [productPrice, setProductPrice] = useState("");
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
 
     function saveCoupon(){
         console.log(couponCode);
@@ -34,7 +35,7 @@ function Admin() {
         
 
         const newProduct = {
-            item: productTitle,
+            title: productTitle,
             category: productCategory,
             image: productImage,
             price: productPrice,
@@ -49,29 +50,47 @@ function Admin() {
 
             <div className="d-flex gap-4">
                 <section className="w-50">
-                    <h1>Add Products</h1>
+                    <h2>Add Products</h2>
 
                     <div>
                         <div className='card'>
                             <div className='card-body'>
-                                <div className='mb-1'>
+                                <div className='mb-2'>
                                     <label className='form-label'>Title</label>
-                                    <input type="text" className='form-control' value={productTitle} onChange={(event)=>setProductTitle(event.target.value)}/>
+                                    <input 
+                                        type="text" 
+                                        className='form-control' 
+                                        value={productTitle} 
+                                        onChange={(event)=>setProductTitle(event.target.value)}/>
                                 </div>
 
                                 <div>
                                     <label className='form-label'>Category</label>
-                                    <input type="text" className='form-control' value={productCategory} onChange={(event)=>setProductCategory(event.target.value)}/>
+                                    <input 
+                                        type="text" 
+                                        className='form-control' 
+                                        value={productCategory} 
+                                        onChange={(event)=>setProductCategory(event.target.value)}/>
+                                        
                                 </div>
 
                                 <div>
                                     <label className='form-label'>Image</label>
-                                    <input type="text" className='form-control' value={productImage} onChange={(event)=>setProductImage(event.target.value)}/>
+                                    <input 
+                                        type="text" 
+                                        className='form-control'
+                                        placeholder='www.image.com'
+                                        value={productImage} 
+                                        onChange={(event)=>setProductImage(event.target.value)}/>
                                 </div>
 
                                 <div>
                                     <label className='form-label'>Price</label>
-                                    <input type="number" className='form-control' value={productPrice} onChange={(event)=>setProductPrice(event.target.value)}/>
+                                    <input 
+                                        type="number" 
+                                        className='form-control' 
+                                        value={productPrice} 
+                                        onChange={(event)=>setProductPrice(event.target.value)}/>
                                 </div>
 
                                 <div>
@@ -81,10 +100,15 @@ function Admin() {
                         </div>
                     </div>
 
-                <div>
-                    <h4>Products List:</h4>
+                <div className="row row-cols-2 row-cols-md-2 g-3">
+                    <h3>Products List:</h3>
                     {products.map(product =>(
-                    <div key={product.item}>{product.category}-{product.image}-{product.price}</div>
+                    <div className='card-body'>
+                        <h4>{product.title}</h4>
+                        <p>{product.category}</p>
+                        <img src={product.image} />
+                        <p>${product.price}</p>
+                    </div>
                 ) )}
                 </div>
 
@@ -98,12 +122,20 @@ function Admin() {
                             <div className="card-body">
                                 <div className="mb-1">
                                     <label className="form-label">Code</label>
-                                    <input type="text" className="form-control" value={couponCode} onChange={(event)=>setCouponCode(event.target.value)}/>
+                                    <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        value={couponCode} 
+                                        onChange={(event)=>setCouponCode(event.target.value)}/>
                                 </div>
 
                                 <div>
                                     <label className="form-label">Discount</label>
-                                    <input type="number" className="form-control" value={couponDiscount} onChange={(event)=>setCouponDiscount(event.target.value)}/>
+                                    <input 
+                                        type="number" 
+                                        className="form-control" 
+                                        value={couponDiscount} 
+                                        onChange={(event)=>setCouponDiscount(event.target.value)}/>
                                 </div>
 
                                 <div className="mt-3">
@@ -114,10 +146,10 @@ function Admin() {
                     </div>
 
                 <div>
-                    <h3>Coupons List</h3>
+                    <h3>Coupons List:</h3>
 
                     {coupons.map(coupon =>(
-                        <div key={coupon.code}>{coupon.code} - {coupon.discount}</div>
+                        <div className='card' key={coupon.code}>{coupon.code} - %{coupon.discount}</div>
                     ) )}
                 </div>
                 </section>

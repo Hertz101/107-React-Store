@@ -1,7 +1,10 @@
 import {Link} from 'react-router'
+import useStore from '../state/cart';
 import "./Navbar.css"
 
 function Navbar() {
+    const {user} = useStore();
+
     return (
         <nav className="navbar navbar-expand-lg bg-success bg-gradient" data-bs-theme="dark">
             <div className="container-fluid">
@@ -32,6 +35,8 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
+
+                <div className='text-white'>{user.name} {user.cohort}</div>
             </div>
         </nav>
     );
