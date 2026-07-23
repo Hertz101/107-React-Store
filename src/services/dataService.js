@@ -58,7 +58,7 @@ const catalog = [
         "title": "Custom Flies",
         "desc": "Flies tied by Eugene",
         "category": "Fishing Gear",
-        "price": 8.78,
+        "price": 8.00,
         "image":"flies.jpg",
         "_id":"7"//Must be unique
         },
