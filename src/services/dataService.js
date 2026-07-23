@@ -28,7 +28,7 @@ const catalog = [
         },
 
         {
-        "title": "Fly fishing Sod",
+        "title": "Fly fishing Rod",
         "desc": "8' Fly fising rod",
         "category": "Fishing Gear",
         "price": 89.00,

@@ -12,8 +12,15 @@ const useStore = create((set) => ({
     clearCart: () =>
         set(() => ({
             cart: []
-        }))
+        })),
 
+        addProductToCart:(product) =>
+            set((state)=> ({
+                cart: [...state.cart, product]
+            }))
+
+
+            
 }))
 
 // export the custom hook so it can be used in components

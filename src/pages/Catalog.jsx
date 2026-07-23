@@ -48,12 +48,15 @@ const [productsToDisplay, setProductsToDisplay] = useState([]); //To hold
     return(
         <div className="catalog">
             <h1>Online Hunting and Fishing Gear</h1>
-            <img src="store.jpg"></img>
-            <div>
-                <button onClick={clearFilter}>Home</button>
-            </div>
-            {categories.map(cat => <button key={cat} onClick={() => filter(cat)} >{cat}</button>)}
+            <img src="store.jpg"></img> 
+                <div>
+                    <button onClick={clearFilter} className="btn btn-success mb-3">Home</button>
+                </div>
+            {categories.map(cat => <button className="btn btn-success" key={cat} onClick={() => filter(cat)} >{cat}</button>)}
+            <div className="gap-4, my-4,">
             {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}
+            </div>
+            
             
         </div>
     );

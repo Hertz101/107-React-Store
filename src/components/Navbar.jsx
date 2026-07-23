@@ -3,7 +3,17 @@ import useStore from '../state/cart';
 import "./Navbar.css"
 
 function Navbar() {
-    const {user} = useStore();
+    const {user, cart} = useStore();
+    
+    function getTotalItems() {
+        let sum = 0
+
+        for(let i=0; i<cart.length; i++){
+            sum = sum + cart[i].quantity
+    }
+
+        return sum
+}
 
     return (
         <nav className="navbar navbar-expand-lg bg-success bg-gradient" data-bs-theme="dark">
@@ -37,6 +47,9 @@ function Navbar() {
                 </div>
 
                 <div className='text-white'>{user.name} {user.cohort}</div>
+                <div className='ms-4 text-white'>
+                    <Link to="/cart"> Cart ({ getTotalItems() })  </Link>
+                </div>
             </div>
         </nav>
     );
